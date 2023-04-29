@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Audio</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+    <link rel="icon" href="{{ url_for('static',filename='img/icon.png') }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg  static-top">
+        <div class="container-fluid">
+
+
+            <img class="img-fluid" id="logo" src="/static/img/logo_2.png" alt="Card image cap">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="bi bi-list" id="navcolap"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item" id="nav_btn">
+                        <a class="nav-link active" aria-current="page" href="/sign_up">sign up</a>
+                    </li> -->
+                    <li class="nav-item" id="nav_btn">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <h1>Do you want to convert PDF into Audio?</h1>
+    </div>
+
+    <div class="steps">
+        <div class="row justify-content-evenly text-center">
+            <div class="col-md-3 col-11" data-player="Upload your PDF document">
+                <div class="card ">
+                    <div class="position-relative overflow-hidden mx-auto custom-circle-image">
+                        <img class="img-fluid" src="/static/img/12-removebg-preview.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Step 1</h4>
+                        <p>Upload your document</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-11" data-player="Select voice">
+                <div class="card ">
+                    <div class="position-relative overflow-hidden mx-auto custom-circle-image">
+                        <img class="img-fluid" src="/static/img/221-removebg-preview.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Step 2</h4>
+                        <p>Select Language</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-11" data-player="Click on Convert">
+                <div class="card ">
+                    <div class="position-relative overflow-hidden mx-auto custom-circle-image">
+                        <img class="img-fluid" src="/static/img/32.png" alt="convert">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Step 3</h4>
+                        <p>Click on Convert</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container2 text-center">
+
+            <form method=POST enctype=multipart/form-data action="{{ url_for('convert') }}" id="form">
+                <div class="row justify-content-evenly text-center">
+
+                    <div class="col-md-3 col-11" id="chose-file">
+                        <input class="form-control btn inputbtn" type=file id="formFile" name="file">
+                        <p style="margin-bottom: 0; font-style:italic ; " id="file-size">Max file size 50MB allowed</p>
+                    </div>
+
+
+                    <div class="col-md-3 col-11">
+                        <select class="btn form-select form-select-lg mb-3 inputbtn"
+                            aria-label=".form-select-lg example" id="voice-select" name="chosen_voice">
+                            <option value="en">English</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="it">Italian</option>
+                            <option value="hi">Hindi</option>
+                            <option value="mr">Marathi</option>
+                            <option value="ja">Japanese</option>
+                            <option value="zh-cn">Chinese</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-11">
+                        <input class="btn inputbtn" id="sbmitBtnu" type="submit" value="Convert">
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+
+        <div class="error text-center">
+            <h5>{{error_msg}}</h5>
+        </div>
+        
+        <div class="text-center my-5">
+            {% block body %} {% endblock %}
+        </div>
+
+        <div class="copyright text-center">
+            <hr>
+            <p class="text-center">© Audio-IT. All Rights Reserved.</p>
+            <hr>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+            integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+            crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>

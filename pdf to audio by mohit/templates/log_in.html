@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Audio</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+    <link rel="icon" href="{{ url_for('static',filename='img/icon.png') }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg  static-top">
+        <div class="container-fluid">
+
+
+            <img class="img-fluid" id="logo" src="/static/img/logo_2.png" alt="Card image cap">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="bi bi-list" id="navcolap"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item" id="nav_btn">
+                        <a class="nav-link active" aria-current="page" href="/sign_up">sign up</a>
+                    </li>
+                    <li class="nav-item" id="nav_btn">
+                        <a class="nav-link" href="/log_in">log in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------sign_in------ -->
+
+    <div class="container-fluid">
+        <div class="row justify-content-evenly" id="signin_pag">
+            <h1 class="col-10 text-center">Want to read anything? Change the way you do it.
+            </h1>
+            <h3 class="col-10 text-center" style="color: red;">{{error_m}}</h3>
+
+            <div class="col-md-5 d-none d-md-block" id="margin">
+                <img class="img-fluid " id="heroimg" src="/static/img/hero4.png" alt="">
+            </div>
+            <div class="col-md-5 justify-content-center text-center signin" id="box">
+                <h1>login</h1>
+                <form method="post" action="/log_in">
+                    <div class="inputbox">
+                        <input type="text" name="username" autocomplete="off" required>
+                        <label for="username"> username </label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="password" name="password"  pattern=".{8,}"  autocomplete="off" required>
+                        <label for="password"> password </label>
+                    </div>
+
+                    <p class="reminde  forgerpass"><a href="#">Forget your password?</a></p>
+
+                    <input class="btn
+            " type="submit" value="login">
+                </form>
+
+                <p class="reminde">
+                    Dont have an account ? <a href="/sign_up"><br> create an account.</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="copyright text-center mt-5">
+            <hr>
+            <p class="text-center">© Audio-IT. All Rights Reserved.</p>
+            <hr>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

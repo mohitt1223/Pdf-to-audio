@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(45deg, black, #00c4ff);
+    color: white;
+}
+
+.navbar {
+    background-color: #121111;
+}
+
+.navbar-nav {
+    width: 96%;
+    justify-content: end;
+}
+
+#nav_btn {
+    display: flex;
+    justify-content:center ;
+    border: none;
+    width: 7rem;
+    background-color: #0f7797;
+    margin: 0 2%;
+    border-radius: 10px;
+    text-transform:capitalize;
+    transition: all 0.3s ease;
+}
+
+#nav_btn a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#nav_btn:hover {
+    background-color: #049bc9;
+}
+
+#nav_btn:focus {
+    background-color: #049bc9;
+}
+
+#logo {
+    height: auto;
+    width: 14%;
+    margin-left: 2%;
+}
+
+.navbar-toggler {
+    padding: .2rem .6rem;
+    border: 2px solid #049bc9;
+    margin-right: 5%;
+}
+
+#navcolap {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+html,
+body {
+    overflow-x: hidden;
+
+}
+
+.container {
+    text-align: center;
+    margin-top: 7%;
+}
+
+.container h1 {
+    font-family: Arial
+}
+
+
+.steps {
+    margin-top: 3rem;
+}
+
+.custom-circle-image {
+    width: 6vw;
+    height: 6vw;
+}
+
+#sbmitBtnu,
+#voice-select,
+#formFile {
+    width: 100%;
+    background-color: #212529;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#sbmitBtnu:hover {
+    background-color: #464646;
+}
+
+#formFile:hover {
+    background-color: #464646;
+}
+
+#voice-select:hover {
+    background-color: #464646;
+}
+
+
+.audioContainer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.warn_msg,
+.error {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+
+.copyright p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+hr {
+    opacity: 0.50;
+}
+
+
+/*------------- sign_in -------------*/
+
+#signin_pag h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+#margin{
+margin: auto;
+}
+
+#heroimg{
+    width: 100%;
+    height: auto;
+    margin:8% 0;
+}
+
+#box {
+    height: min-content;
+    padding: 0 55px 30px 55px;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    background-color: #5252523d;
+    box-shadow: 0px 0px 25px 0px black;
+    font-family: 'Roboto Slab', serif;
+    margin: auto;
+}
+
+#box h1 {
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+    padding-bottom: 0.5rem;
+}
+
+
+#box h1::after {
+    position: absolute;
+    content: " ";
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #008fed;
+
+}
+
+#box .inputbox {
+    position: relative;
+}
+
+#box .inputbox input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+#box .inputbox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0px;
+    font-size: 1.3rem;
+    transition: all 0.4s ease;
+    color: white;
+    letter-spacing: 1px;
+}
+
+#box .inputbox input:focus~label,
+#box .inputbox input:valid~label {
+    top: -25px;
+    left: 0;
+    color: #008fed;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#box input[type='submit'] {
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 24px;
+    padding: 6px 0px;
+    background-color: #008fed;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#box input[type='submit']:active {
+    transform: scale(0.95);
+}
+
+.reminde {
+    font-size: 1rem;
+    padding-top: 1rem;
+}
+
+.reminde a {
+    color: #121111;
+    font-weight: 600;
+}
+
+.reminde a:hover {
+    color: #000000;
+    font-weight: 700;
+}
+
+.forgerpass {
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+}
+
+.forgerpass a{
+    text-decoration: none;
+}
+ 
+/*------------ media-quary ------------*/
+
+@media (max-width: 830px){
+    #signin_pag h1{
+        margin-bottom: 4%;
+    }
+
+    #box h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 0.8rem;
+    }
+
+    #box .inputbox input {
+        font-size: 1rem;
+    }
+
+    #box .inputbox label {
+        font-size: 1rem;
+    }
+
+    #box .inputbox input:focus~label,
+    #box .inputbox input:valid~label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 780px) {
+
+    #logo {
+        width: 16%;
+    }
+
+    #nav_btn {
+        width: 100%;
+        margin: 2% 0 2% 2%;
+    }
+
+    /* signin */
+
+    #signin_pag h1 {
+        font-size: 2rem;
+    }
+
+    #box {
+        width: 45%;
+    }
+
+}
+
+@media (max-width: 541px) {
+
+    body {
+        background-image: linear-gradient(180deg, black, #02ade0);
+    }
+
+    .custom-circle-image {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    #logo {
+        width: 28%;
+    }
+
+    #chose-file {
+        margin: 1rem 0;
+    }
+
+    #sbmitBtnu {
+        margin-bottom: 4rem;
+    }
+
+    .copyright p {
+        color: #212529;
+    }
+
+    hr {
+        color: black;
+    }
+
+    /* signin */
+
+    #signin_pag h1 {
+        font-size: 1.6rem;
+        margin: 5% 0 3% 0;
+    }
+
+    #box {
+        width: 76%;
+        padding: 0 40px 10px 40px;
+        margin: 6% 0;
+    }
+
+
+    #box h1 {
+        font-size: 1.6rem;
+        margin-top: 10%;
+        margin-bottom: 1.5rem;
+    }
+
+    #box .inputbox input {
+        font-size: 0.9rem;
+        padding: 14px 3px 3px 3px;
+    }
+
+    #box .inputbox label {
+        font-size: 0.9rem;
+        padding: 15px 0px;
+    }
+
+    #box .inputbox input:focus~label,
+    #box .inputbox input:valid~label {
+        top: -22px;
+        font-size: 0.8rem;
+    }
+
+    #box input[type='submit'] {
+        font-size: 18px;
+        padding: 3px 0px;
+    }
+
+    .reminde {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 395px) {
+
+
+    #logo {
+        width: 30%;
+    }
+
+    .custom-circle-image {
+        width: 16vw;
+        height: 16vw;
+    }
+
+}
+
+@media (max-width: 285px) {
+    #box {
+        padding: 0 20px 40px 20px;
+        width: 80%;
+    }
+}

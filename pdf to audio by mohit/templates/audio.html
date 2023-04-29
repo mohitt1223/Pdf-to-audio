@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block body %}
+
+<div class="audioContainer">
+    <audio controls>
+        <source src={{audio_file}} type="audio/mpeg">
+      </audio>
+</div>
+
+
+<div class="warn_msg" id="file-size">
+  <h5>Download this file if you want, because it will be deleted from this server soon!</h5>
+</div>
+
+
+{% endblock %}
